@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Egg Tooltip Options</title>
+    <style>
+      body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial; margin: 16px; }
+      table { width:100%; border-collapse: collapse; margin-top:10px;}
+      th, td { border:1px solid #ddd; padding:8px; vertical-align: top; font-size: 13px;}
+      textarea { width:100%; height:50px; }
+      input[type="text"] { width:100%; }
+      .toolbar { display:flex; gap:8px; margin-bottom:8px; }
+      button { padding:6px 10px; border-radius:8px; border:1px solid #ddd; background:#fff; cursor:pointer; }
+      .hint { color:#666; font-size:12px; margin-top:8px; }
+      code { background:#f3f3f5; padding:2px 4px; border-radius:4px; }
+    </style>
+  </head>
+  <body>
+    <h2>Egg Rules (phrases > keywords-all > keywords-some)</h2>
+    <div class="toolbar">
+      <button id="add">규칙 추가</button>
+      <button id="save">저장</button>
+      <button id="reset">기본 규칙으로 초기화</button>
+    </div>
+    <table id="rules">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Phrases (줄바꿈 분리)</th>
+          <th>Keywords (줄바꿈 분리)</th>
+          <th>Egg Image URL</th>
+          <th>Adult Image URL</th>
+          <th>Page URL (예: https://dragcave.fandom.com/wiki/${slug})</th>
+          <th>삭제</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="hint">
+      * Page URL에 <code>${slug}</code> 사용 가능. 비워두면 <code>name</code>으로 자동 생성됩니다.
+    </div>
+    <script type="module" src="../scripts/options.js"></script>
+  </body>
+</html>
