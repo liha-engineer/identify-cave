@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Identify_Cave",
+  "description": "설명만으로는 알 수 없는 알들을 구분해보자",
+  "version": "0.5.0",
+  "options_page": "pages/options.html",
+  "icons": {
+    "128": "images/icon_128.png"
+  },
+  "action": {
+    "default_icon": {
+      "128": "images/icon_128.png"
+    },
+    "default_title": "Identify_Cave"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  },
+   "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://dragcave.net/*"],
+      "js": ["scripts/tooltip.js", "scripts/rules.js", "scripts/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "*://dragcave.net/*",
+    "*://www.dragcave.net/*",
+    "https://dragcave.fandom.com/*",
+    "https://static.wikia.nocookie.net/*"
+  ],
+
+  "background": {
+    "service_worker": "scripts/background.js",
+    "type": "module"
+  }
+}

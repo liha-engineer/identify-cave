@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "prettier": "^3.7.4",
+    "yarn": "^1.22.22"
+  },
+  "name": "identifycave",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "liha-engineer <liha.engineer@gmail.com>",
+  "license": "MIT",
+  "type": "module"
+}
