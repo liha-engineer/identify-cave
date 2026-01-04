@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    {
+      "id": "Aeon",
+      "name": "Aeon Wyvern",
+      "phrases": ["It’s almost like time is distorted around this egg."],
+      "keywords": ["distort"],
+      "eggImageUrl": "https://static.wikia.nocookie.net/dragcave/images/d/d4/Aeon_egg.gif/revision/latest?cb=20160822010152",
+      "adultImageUrl": "https://static.wikia.nocookie.net/dragcave/images/4/41/Aeon_adult_female.png/revision/latest?cb=20160824122419",
+      "pageUrl":  "https://dragcave.fandom.com/wiki/${nameParticle}"
+    },
+    {
+
+    }
+  ]
+}
